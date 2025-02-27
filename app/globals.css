@@ -7,15 +7,22 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+  background: linear-gradient(157.25deg, #ffffff 3.62%, #fafafa 88.02%);
+  background-color: #ffffff;
+  background-image: radial-gradient(circle at center center, #f0f0f0, #ffffff),
+    repeating-radial-gradient(
+      circle at center center,
+      #f0f0f0,
+      #f0f0f0,
+      4px,
+      transparent 8px,
+      transparent 4px
+    );
+  background-blend-mode: multiply;
 }
