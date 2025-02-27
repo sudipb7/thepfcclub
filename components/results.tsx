@@ -1,20 +1,22 @@
+import Link from "next/link";
+
 const RESULTS_DATA = [
   {
     metric: "15k+",
     label: "active members",
-    color: "bg-yellow-50 text-yellow-600",
+    color: "bg-yellow-50 text-yellow-600 border-yellow-200",
     logo: "THEPFC",
   },
   {
     metric: "92%",
     label: "success rate",
-    color: "bg-pink-50 text-pink-600",
+    color: "bg-pink-50 text-pink-600 border-pink-200",
     logo: "THEPFC",
   },
   {
     metric: "30kg",
     label: "avg. transformation",
-    color: "bg-green-50 text-green-600",
+    color: "bg-green-50 text-green-600 border-green-200",
     logo: "THEPFC",
   },
 ];
@@ -23,17 +25,19 @@ const TESTIMONIALS = [
   {
     quote:
       "I've lost 25kg and completely transformed my lifestyle. The personalized approach and constant support made all the difference!",
-    author: "Sarah Chen",
+    author: "Samruddhi Prabhu",
     role: "Lost 25kg in 8 months",
-    image: "https://avatar.vercel.sh/sarah",
+    image:
+      "https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=1200",
     logo: "/company-logo.png",
   },
   {
     quote:
       "From barely being able to run 1km to completing my first marathon. The structured training plans provided by The PFC Club have been remarkable!",
-    author: "Michael Roberts",
+    author: "Sooraj Roy",
     role: "Marathon Achievement",
-    image: "https://avatar.vercel.sh/michael",
+    image:
+      "https://images.pexels.com/photos/10311994/pexels-photo-10311994.jpeg?auto=compress&cs=tinysrgb&w=1200",
     logo: "/company-logo.png",
   },
 ];
@@ -74,7 +78,9 @@ export function Results() {
               className="bg-neutral-50 p-6 rounded-lg border shadow-sm"
             >
               <div className="space-y-4">
-                <p className="text-neutral-600 font-medium">&ldquo;{item.quote}&rdquo;</p>
+                <p className="text-neutral-600 font-medium">
+                  &ldquo;{item.quote}&rdquo;
+                </p>
                 <div className="flex items-center gap-3">
                   {/* eslint-disable-next-line */}
                   <img
@@ -95,12 +101,12 @@ export function Results() {
         </div>
 
         <div className="mt-12 text-center">
-          <a
+          <Link
             href="/transformations"
             className="inline-flex items-center justify-center px-6 py-2.5 font-medium text-white bg-orange-500 rounded-full hover:bg-orange-600 transition-colors"
           >
             See more transformations
-          </a>
+          </Link>
         </div>
       </div>
     </section>

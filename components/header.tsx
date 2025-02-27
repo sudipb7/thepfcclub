@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, Search, X } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -40,8 +41,15 @@ export function Header() {
       }`}
     >
       <div className="flex items-center justify-between w-full mx-auto max-w-screen-xl h-16 bg-background px-4 md:px-8">
-        <div className="font-heading font-black text-2xl tracking-tight text-orange-500">
-          THEPFC
+        <div className="relative overflow-hidden h-8 w-16">
+          <Image
+            src="/logo.png"
+            alt="ThePFCClub"
+            fill
+            priority
+            quality={100}
+            className="object-cover"
+          />
         </div>
         <nav className="hidden md:flex items-center gap-x-1">
           {NAV_LINKS.map((link) => {

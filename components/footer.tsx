@@ -7,10 +7,12 @@ import {
   Instagram,
   Twitter,
   Youtube,
+  Linkedin,
   Mail,
   Phone,
   MapPin,
 } from "lucide-react";
+import Image from "next/image";
 
 const FOOTER_LINKS = [
   {
@@ -45,8 +47,9 @@ const FOOTER_LINKS = [
 const SOCIAL_LINKS = [
   { icon: Facebook, href: "https://facebook.com" },
   { icon: Instagram, href: "https://instagram.com" },
-  { icon: Twitter, href: "https://twitter.com" },
   { icon: Youtube, href: "https://youtube.com" },
+  { icon: Twitter, href: "https://twitter.com" },
+  { icon: Linkedin, href: "https://linkedin.com" },
 ];
 
 export function Footer() {
@@ -63,8 +66,15 @@ export function Footer() {
       <div className="mx-auto w-full max-w-screen-xl px-4 py-12 md:px-8">
         <div className="grid gap-8 sm:gap-12 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           <div className="space-y-4 col-span-2 md:col-span-3 lg:col-span-2">
-            <div className="font-heading font-black text-2xl tracking-tight text-orange-500">
-              THEPFC
+            <div className="relative overflow-hidden h-8 w-16">
+              <Image
+                src="/logo.png"
+                alt="ThePFCClub"
+                fill
+                priority
+                quality={100}
+                className="object-cover"
+              />
             </div>
             <p className="text-sm font-medium text-neutral-600 max-w-xs">
               Subscribe to our newsletter to get updates on new features,
@@ -113,21 +123,21 @@ export function Footer() {
             <div className="space-y-2 text-sm font-medium text-neutral-600">
               <p className="flex items-center gap-2">
                 <Phone className="size-4" />
-                <a
-                  href="tel:+919876543210"
+                <Link
+                  href="tel:+919970163396"
                   className="hover:text-neutral-800 transition-colors"
                 >
-                  +91 98765 43210
-                </a>
+                  +91 99701 63396
+                </Link>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="size-4" />
-                <a
-                  href="mailto:hello@thepfcclub.com"
+                <Link
+                  href="mailto:contact@projectfitco.com"
                   className="hover:text-neutral-800 transition-colors"
                 >
-                  hello@thepfcclub.com
-                </a>
+                  contact@projectfitco.com
+                </Link>
               </p>
               <p className="flex items-start gap-2">
                 <MapPin className="size-4 shrink-0 mt-1" />
@@ -153,7 +163,7 @@ export function Footer() {
           <div className="space-y-3">
             <h3 className="font-heading font-semibold">Download Our App</h3>
             <div className="flex flex-wrap gap-2">
-              <a
+              <Link
                 href="#"
                 className="inline-block"
                 target="_blank"
@@ -165,8 +175,8 @@ export function Footer() {
                   alt="Download on the App Store"
                   className="h-10"
                 />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="inline-block"
                 target="_blank"
@@ -178,7 +188,7 @@ export function Footer() {
                   alt="Get it on Google Play"
                   className="h-10"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -189,7 +199,7 @@ export function Footer() {
           </div>
           <div className="flex items-center gap-4">
             {SOCIAL_LINKS.map((social) => (
-              <a
+              <Link
                 key={social.href}
                 href={social.href}
                 target="_blank"
@@ -197,7 +207,7 @@ export function Footer() {
                 className="text-neutral-600 hover:text-neutral-800 transition-colors"
               >
                 <social.icon className="size-5" />
-              </a>
+              </Link>
             ))}
           </div>
         </div>

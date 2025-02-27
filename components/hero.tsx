@@ -19,17 +19,19 @@ export function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-2">
           <div className="flex -space-x-4">
-            {[1, 2, 3, 4, 5].map((index) => (
+            {[
+              "https://images.pexels.com/photos/654696/pexels-photo-654696.jpeg?auto=compress&cs=tinysrgb&w=1200",
+              "https://images.pexels.com/photos/29881401/pexels-photo-29881401/free-photo-of-intense-portrait-of-a-young-man-in-studio-lighting.jpeg?auto=compress&cs=tinysrgb&w=1200",
+              "https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=1200",
+              "https://images.pexels.com/photos/28408585/pexels-photo-28408585/free-photo-of-close-up-portrait-of-a-man-outdoors.jpeg?auto=compress&cs=tinysrgb&w=1200",
+              "https://images.pexels.com/photos/5422381/pexels-photo-5422381.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            ].map((img) => (
               <div
-                key={index}
+                key={img}
                 className="w-10 h-10 rounded-full border-2 border-white overflow-hidden"
               >
                 {/* eslint-disable-next-line */}
-                <img
-                  src={`https://avatar.vercel.sh/${index}`}
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
+                <img src={img} alt="" className="w-full h-full object-cover" />
               </div>
             ))}
           </div>
@@ -37,7 +39,7 @@ export function Hero() {
             Used by 11,000+ People
           </span>
         </div>
-        <button className="inline-flex items-center justify-center px-6 py-2.5 font-medium font-heading text-white bg-orange-500 rounded-full [box-shadow:0px_0px_0px_2px_#e5e5e7] hover:bg-orange-600 transition-colors">
+        <button className="inline-flex shadow-sm items-center justify-center px-6 py-2.5 font-medium font-heading text-white bg-orange-500 rounded-full hover:bg-orange-600 transition-colors">
           Schedule a free call
         </button>
       </div>

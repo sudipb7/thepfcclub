@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const BLOG_POSTS = [
   {
     title: "The Science Behind Effective Fat Loss",
@@ -94,12 +96,12 @@ export function Blog() {
         </div>
 
         <div className="mt-8 sm:mt-10 md:mt-12 text-center">
-          <a
+          <Link
             href="/blog"
             className="inline-flex items-center justify-center px-6 py-2.5 font-medium text-orange-500 hover:text-orange-600 transition-colors"
           >
             View all articles →
-          </a>
+          </Link>
         </div>
       </div>
     </section>

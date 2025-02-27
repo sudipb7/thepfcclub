@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Marquee } from "@/components/magicui/marquee";
+import Link from "next/link";
 
 const TIERS = [
   {
@@ -33,252 +34,162 @@ const TIERS = [
 const COACHES = {
   Essential: [
     {
-      name: "Jack",
-      price: "$99",
-      discountedPrice: "$79",
-      img: "https://avatar.vercel.sh/jack",
+      name: "Akhila Vadrevu",
+      price: 7499,
+      discountedPrice: 4299,
+      img: "https://thepfc.club/cdn/shop/files/PFCCoachAkhila.png?v=1691560438&width=720",
     },
     {
-      name: "Sarah",
-      price: "$99",
-      discountedPrice: "$79",
-      img: "https://avatar.vercel.sh/sarah",
+      name: "Himanshu Soni",
+      price: 7499,
+      discountedPrice: 4299,
+      img: "https://thepfc.club/cdn/shop/files/PFCClubCoachHimanshu_8eb76b37-c43c-4760-a2b6-c0af6e039e09.png?v=1691084449",
     },
     {
-      name: "Marcus",
-      price: "$99",
-      discountedPrice: "$79",
-      img: "https://avatar.vercel.sh/marcus",
+      name: "Ajeenkya Patwordhan",
+      price: 6999,
+      discountedPrice: 299,
+      img: "https://thepfc.club/cdn/shop/files/Ajeenkya.jpg?v=1717268158&width=720",
     },
     {
-      name: "Nina",
-      price: "$99",
-      discountedPrice: "$79",
-      img: "https://avatar.vercel.sh/nina",
+      name: "Ashutosh Ray",
+      price: 7499,
+      discountedPrice: 4299,
+      img: "https://thepfc.club/cdn/shop/files/AshutoshRay_7faac3a6-5feb-4512-bc22-4d13c8b4100d.jpg?v=1715617745&width=720",
     },
     {
-      name: "Carlos",
-      price: "$99",
-      discountedPrice: "$79",
-      img: "https://avatar.vercel.sh/carlos",
-    },
-    {
-      name: "Sophia",
-      price: "$99",
-      discountedPrice: "$79",
-      img: "https://avatar.vercel.sh/sophia",
-    },
-    {
-      name: "Ryan",
-      price: "$99",
-      discountedPrice: "$79",
-      img: "https://avatar.vercel.sh/ryan",
-    },
-    {
-      name: "Maya",
-      price: "$99",
-      discountedPrice: "$79",
-      img: "https://avatar.vercel.sh/maya",
+      name: "Rayshi Sood",
+      price: 7499,
+      discountedPrice: 299,
+      img: "https://thepfc.club/cdn/shop/files/RayshiSood.jpg?v=1717400277&width=720",
     },
   ],
   "Essential+": [
     {
-      name: "Mike",
-      price: "$149",
-      discountedPrice: "$129",
-      img: "https://avatar.vercel.sh/mike",
+      name: "Somesh Pal",
+      price: 11999,
+      discountedPrice: 499,
+      img: "https://thepfc.club/cdn/shop/files/somesh-pal-best-male-personal-fitness-trainer-online-in-india-pfc_3217950d-f877-4aff-aaa7-4a71d9efa4b6.png?v=1691088932",
     },
     {
-      name: "Emma",
-      price: "$149",
-      discountedPrice: "$129",
-      img: "https://avatar.vercel.sh/emma",
+      name: "Smruti Sahoo",
+      price: 7599,
+      discountedPrice: 499,
+      img: "https://thepfc.club/cdn/shop/files/PFCClubCoachSmruti.jpg?v=1711447517&width=720",
     },
     {
-      name: "Daniel",
-      price: "$149",
-      discountedPrice: "$129",
-      img: "https://avatar.vercel.sh/daniel",
+      name: "Amit Suresh Thorat",
+      price: 11999,
+      discountedPrice: 4299,
+      img: "https://thepfc.club/cdn/shop/files/Amit-Suresh-Thorat-free-male-fitness-personal-trainer-pfc-club-gym-workout-exercies_f3e57947-c900-431b-b3e3-fdb0d8d2b422.png?v=1691089110",
     },
     {
-      name: "Olivia",
-      price: "$149",
-      discountedPrice: "$129",
-      img: "https://avatar.vercel.sh/olivia",
+      name: "Vivek Gupta",
+      price: null,
+      discountedPrice: 499,
+      img: "https://thepfc.club/cdn/shop/files/FacebookAd_50dc0308-6d05-4dc4-b8f3-acc59fcfdb41.png?v=1729229778&width=720",
     },
     {
-      name: "Thomas",
-      price: "$149",
-      discountedPrice: "$129",
-      img: "https://avatar.vercel.sh/thomas",
+      name: "Sujata Pal",
+      price: null,
+      discountedPrice: 499,
+      img: "https://thepfc.club/cdn/shop/files/Sujata.jpg?v=1733637788&width=720",
     },
     {
-      name: "Isabella",
-      price: "$149",
-      discountedPrice: "$129",
-      img: "https://avatar.vercel.sh/isabella",
-    },
-    {
-      name: "Lucas",
-      price: "$149",
-      discountedPrice: "$129",
-      img: "https://avatar.vercel.sh/lucas",
-    },
-    {
-      name: "Sophie",
-      price: "$149",
-      discountedPrice: "$129",
-      img: "https://avatar.vercel.sh/sophie",
+      name: "Karunnesh Sharma",
+      price: null,
+      discountedPrice: 499,
+      img: "https://thepfc.club/cdn/shop/files/Karunesh.jpg?v=1735137672&width=720",
     },
   ],
   Executive: [
     {
-      name: "David",
-      price: "$249",
-      discountedPrice: "$199",
-      img: "https://avatar.vercel.sh/david",
+      name: "Ishaan Jain",
+      price: 15999,
+      discountedPrice: 799,
+      img: "https://thepfc.club/cdn/shop/files/PFCClubCoachIshaan.jpg?v=1710138111&width=720",
     },
     {
-      name: "Lisa",
-      price: "$249",
-      discountedPrice: "$199",
-      img: "https://avatar.vercel.sh/lisa",
+      name: "Dipti Sardeshpande",
+      price: 11999,
+      discountedPrice: 799,
+      img: "https://thepfc.club/cdn/shop/files/PFCClubCoachDipti_84a83df1-f8c6-4212-b8ac-f1cb7dc4a57b.png?v=1691084859",
     },
     {
-      name: "Michael",
-      price: "$249",
-      discountedPrice: "$199",
-      img: "https://avatar.vercel.sh/michael",
+      name: "Sagar Sengupta",
+      price: 15999,
+      discountedPrice: 1699,
+      img: "https://thepfc.club/cdn/shop/files/SagarSenguptaPFCClub.jpg?v=1716969478&width=720",
     },
     {
-      name: "Jennifer",
-      price: "$249",
-      discountedPrice: "$199",
-      img: "https://avatar.vercel.sh/jennifer",
+      name: "Siddhartha Choudhury",
+      price: 15999,
+      discountedPrice: 15999,
+      img: "https://thepfc.club/cdn/shop/files/PFCClubCoachSiddartha.jpg?v=1709040980&width=720",
     },
     {
-      name: "William",
-      price: "$249",
-      discountedPrice: "$199",
-      img: "https://avatar.vercel.sh/william",
+      name: "Deepak R",
+      price: null,
+      discountedPrice: 799,
+      img: "https://thepfc.club/cdn/shop/files/DeepakR.jpg?v=1734516466&width=720",
     },
     {
-      name: "Elizabeth",
-      price: "$249",
-      discountedPrice: "$199",
-      img: "https://avatar.vercel.sh/elizabeth",
-    },
-    {
-      name: "Christopher",
-      price: "$249",
-      discountedPrice: "$199",
-      img: "https://avatar.vercel.sh/christopher",
-    },
-    {
-      name: "Samantha",
-      price: "$249",
-      discountedPrice: "$199",
-      img: "https://avatar.vercel.sh/samantha",
+      name: "Kamal Saini",
+      price: 22499,
+      discountedPrice: 799,
+      img: "https://thepfc.club/cdn/shop/files/FacebookAd.png?v=1698213383&width=720",
     },
   ],
   "Executive+": [
     {
-      name: "Alex",
-      price: "$349",
-      discountedPrice: "$299",
-      img: "https://avatar.vercel.sh/alex",
+      name: "Rashmi Agarwal",
+      price: 22499,
+      discountedPrice: 1299,
+      img: "https://thepfc.club/cdn/shop/files/Rashmi-Agarwal-personal-female-trainer-in-india-usa-vietnam-canada-pfc_b537751a-2ea1-4a82-aba7-10a35a08cea8.png?v=1691077952",
     },
     {
-      name: "Rachel",
-      price: "$349",
-      discountedPrice: "$299",
-      img: "https://avatar.vercel.sh/rachel",
+      name: "Yash Rathod",
+      price: 24999,
+      discountedPrice: 1599,
+      img: "https://thepfc.club/cdn/shop/files/yash-rathod-male-fitness-personal-trainer-india-usa-vietnam-canada-pfc-club_b3f760fc-f0aa-4343-9855-25cd2bbb88a4.png?v=1691078755",
     },
     {
-      name: "Jonathan",
-      price: "$349",
-      discountedPrice: "$299",
-      img: "https://avatar.vercel.sh/jonathan",
-    },
-    {
-      name: "Victoria",
-      price: "$349",
-      discountedPrice: "$299",
-      img: "https://avatar.vercel.sh/victoria",
-    },
-    {
-      name: "Benjamin",
-      price: "$349",
-      discountedPrice: "$299",
-      img: "https://avatar.vercel.sh/benjamin",
-    },
-    {
-      name: "Natalie",
-      price: "$349",
-      discountedPrice: "$299",
-      img: "https://avatar.vercel.sh/natalie",
-    },
-    {
-      name: "Andrew",
-      price: "$349",
-      discountedPrice: "$299",
-      img: "https://avatar.vercel.sh/andrew",
-    },
-    {
-      name: "Katherine",
-      price: "$349",
-      discountedPrice: "$299",
-      img: "https://avatar.vercel.sh/katherine",
+      name: "Dr Manmeet Kaur",
+      price: 24999,
+      discountedPrice: 1599,
+      img: "https://thepfc.club/cdn/shop/files/PFCClubCoachManmeetKaur.jpg?v=1710329021&width=720",
     },
   ],
   Elite: [
     {
-      name: "James",
-      price: "$499",
-      discountedPrice: "$449",
-      img: "https://avatar.vercel.sh/james",
+      name: "Sumit Vasvani",
+      price: null,
+      discountedPrice: 1699,
+      img: "https://thepfc.club/cdn/shop/files/PFCClubCoachSumit_bb046147-ed7c-4b93-bc25-cd6a6eda13bd.png?v=1691074559&width=720",
     },
     {
-      name: "Charlotte",
-      price: "$499",
-      discountedPrice: "$449",
-      img: "https://avatar.vercel.sh/charlotte",
+      name: "Hardik Bonthu",
+      price: null,
+      discountedPrice: 1699,
+      img: "https://thepfc.club/cdn/shop/files/Hardik-Bonthu-best-personal-male-trainer-in-pfc_3eb2ec3e-e4e3-493d-81d9-ee36c3f1d4d6.png?v=1691075634",
     },
     {
-      name: "Richard",
-      price: "$499",
-      discountedPrice: "$449",
-      img: "https://avatar.vercel.sh/richard",
+      name: "Priyanka Lahiri",
+      price: null,
+      discountedPrice: 1699,
+      img: "https://thepfc.club/cdn/shop/files/Priyanka-Lahiri-special-wellness-coach-in-india-usa-canada-vietnam-pfc_67f894e0-3226-4393-b147-32b07bd38914.png?v=1691075952",
     },
     {
-      name: "Alexandra",
-      price: "$499",
-      discountedPrice: "$449",
-      img: "https://avatar.vercel.sh/alexandra",
+      name: "Satej Gohel",
+      price: 54999,
+      discountedPrice: 1699,
+      img: "https://thepfc.club/cdn/shop/files/Satej-Gohel-muscle-gainer-weightlifting-coach-pfc_575af576-84c8-4836-a3cb-95c9646dedab.png?v=1691078407",
     },
     {
-      name: "Sebastian",
-      price: "$499",
-      discountedPrice: "$449",
-      img: "https://avatar.vercel.sh/sebastian",
-    },
-    {
-      name: "Gabriella",
-      price: "$499",
-      discountedPrice: "$449",
-      img: "https://avatar.vercel.sh/gabriella",
-    },
-    {
-      name: "Maxwell",
-      price: "$499",
-      discountedPrice: "$449",
-      img: "https://avatar.vercel.sh/maxwell",
-    },
-    {
-      name: "Isabella",
-      price: "$499",
-      discountedPrice: "$449",
-      img: "https://avatar.vercel.sh/isabella_elite",
+      name: "Sagar Sengupta",
+      price: 15999,
+      discountedPrice: 1699,
+      img: "https://thepfc.club/cdn/shop/files/SagarSenguptaPFCClub.jpg?v=1716969478&width=720",
     },
   ],
 };
@@ -344,6 +255,14 @@ export function Coaches() {
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background"></div>
         </div>
       </div>
+      <div className="mt-8 sm:mt-10 md:mt-12 text-center">
+        <Link
+          href="/coaches"
+          className="inline-flex items-center justify-center px-6 py-2.5 font-medium text-white bg-orange-500 rounded-full hover:bg-orange-600 transition-colors"
+        >
+          View all coaches
+        </Link>
+      </div>
     </section>
   );
 }
@@ -355,23 +274,21 @@ function CoachCard({
   img,
 }: {
   name: string;
-  price: string;
-  discountedPrice: string;
+  price: number | null;
+  discountedPrice: number;
   img: string;
 }) {
   return (
-    <div className="rounded-md shadow-sm border p-2.5 w-44">
+    <div className="rounded-md shadow-sm border p-2.5 w-44 cursor-pointer">
       {/* eslint-disable-next-line */}
-      <img
-        src={`${img}.png`}
-        alt={name}
-        className="w-full object-cover rounded"
-      />
+      <img src={img} alt={name} className="w-full object-cover rounded" />
       <div className="space-y-0.5 mt-2">
         <h3 className="font-semibold text-neutral-800">{name}</h3>
         <p className="text-sm font-medium text-neutral-600">
-          {discountedPrice}{" "}
-          <span className="text-xs line-through text-neutral-400">{price}</span>
+          ₹{discountedPrice}{" "}
+          <span className="text-xs line-through text-neutral-400">
+            ₹{price}
+          </span>
         </p>
       </div>
     </div>
