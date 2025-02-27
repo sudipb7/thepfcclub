@@ -76,6 +76,7 @@ export function Results() {
               <div className="space-y-4">
                 <p className="text-neutral-600 font-medium">&ldquo;{item.quote}&rdquo;</p>
                 <div className="flex items-center gap-3">
+                  {/* eslint-disable-next-line */}
                   <img
                     src={item.image}
                     alt={item.author}

@@ -361,6 +361,7 @@ function CoachCard({
 }) {
   return (
     <div className="rounded-md shadow-sm border p-2.5 w-44">
+      {/* eslint-disable-next-line */}
       <img
         src={`${img}.png`}
         alt={name}

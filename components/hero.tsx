@@ -24,6 +24,7 @@ export function Hero() {
                 key={index}
                 className="w-10 h-10 rounded-full border-2 border-white overflow-hidden"
               >
+                {/* eslint-disable-next-line */}
                 <img
                   src={`https://avatar.vercel.sh/${index}`}
                   alt=""

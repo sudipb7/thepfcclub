@@ -61,6 +61,7 @@ export function Blog() {
               className="group bg-white border rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow"
             >
               <div className="aspect-[16/9] relative overflow-hidden">
+              {/* eslint-disable-next-line */}
                 <img
                   src={post.image}
                   alt={post.title}

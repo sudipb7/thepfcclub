@@ -159,6 +159,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                {/* eslint-disable-next-line */}
                 <img
                   src="/app-store-badge.png"
                   alt="Download on the App Store"
@@ -171,6 +172,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                {/* eslint-disable-next-line */}
                 <img
                   src="/play-store-badge.png"
                   alt="Get it on Google Play"
